@@ -14,11 +14,11 @@ export default class FirstClassComponent
   };
 
   render(): JSX.Element {
-    return(<div>
+    return(<React.Fragment>
       <h1>{ this.props.title } to the First Class Component</h1>
       <button onClick={this.handleClick}>Click Me!</button>
       <button onClick={ () => this.props.onPushData() }>Click Me!</button>
       <button onClick={ this.props.onPushData }>Click Me!</button>
-    </div>);
+    </React.Fragment>);
   }
 }
