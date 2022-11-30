@@ -5,13 +5,14 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import AppDayTwo from './AppDayTwo';
+import AppRoute from './AppRoute';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <AppDayTwo />
+    <AppRoute />
   </React.StrictMode>
 );
 
