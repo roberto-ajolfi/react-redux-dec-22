@@ -40,3 +40,10 @@
 .hidden {
   display: none;
 }
+
+.error {
+  color: crimson;
+  background-color: lightgray;
+  font-weight: bold;
+  font-size: 16px;
+}
