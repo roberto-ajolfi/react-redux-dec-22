@@ -6,13 +6,18 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
 import AppDayTwo from './AppDayTwo';
 import AppRoute from './AppRoute';
+import store from './store/toolkit/store';
+import { Provider } from 'react-redux';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <AppRoute />
+    <Provider store={store}>
+      <AppRoute />
+    </Provider>
   </React.StrictMode>
 );
 
