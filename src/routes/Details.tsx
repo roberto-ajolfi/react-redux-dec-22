@@ -1,10 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
 
-// interface IDetailsRouteParams {
-//   id: string;
-// }
-
 const Details = () => {
   const params = useParams<{ id: string }>();
 

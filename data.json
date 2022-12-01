@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userName": "mrossi",
+      "password": "123456",
+      "fullName": "Mario Rossi",
+      "salary": 1000,
+      "isManager": false
+    },
+    {
+      "id": 2,
+      "userName": "lverdi",
+      "password": "123456",
+      "fullName": "Luigi Verdi",
+      "salary": 1500,
+      "isManager": false
+    },
+    {
+      "id": 3,
+      "userName": "pbianchi",
+      "password": "123456",
+      "fullName": "Paolo Bianchi",
+      "salary": 3000,
+      "isManager": true
+    },
+    {
+      "id": "9efbc7e6-5c75-4abf-a854-b617b6caf97c",
+      "userName": "pbaudo",
+      "fullName": "",
+      "password": "123456",
+      "salary": 0,
+      "isManager": true
+    }
+  ]
+}

@@ -3,6 +3,8 @@ import User from "../../models/User";
 import { v4 as uuid } from "uuid";
 import SimpleReactValidator from "simple-react-validator";
 import "../../App.css";
+import UserDataService from "../../services/UserDataService";
+import { useNavigate, useNavigation } from "react-router-dom";
 
 const UserForm: React.FC = () => {
   const [userName, setUserName] = useState("");
@@ -11,7 +13,9 @@ const UserForm: React.FC = () => {
   const [role, setRole] = useState("");
   const [notes, setNotes] = useState("");
   const [forceUpdate, setForceUpdate] = useState(false);
-  
+
+  const navigate = useNavigate();
+
   const fileRef = useRef<HTMLInputElement>(null);
 
   const validator = useRef(
@@ -20,7 +24,7 @@ const UserForm: React.FC = () => {
     })
   );
 
-  const handleSubmit = (evt: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (evt: React.FormEvent<HTMLFormElement>) => {
     evt.preventDefault();
 
     if (validator.current.allValid()) {
@@ -33,6 +37,12 @@ const UserForm: React.FC = () => {
         salary: 0,
         isManager,
       };
+
+      const svc = new UserDataService("http://localhost:3001/users");
+
+      const result = await svc.addNewUser(data);
+
+      navigate('/usersapi');
 
       // A
       const fileAPI = fileRef.current?.files!;

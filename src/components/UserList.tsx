@@ -18,6 +18,7 @@ const UserList: React.FC<IUserListProps> = (props) => {
           <th>Id</th>
           <th>Full Name</th>
           <th>Username</th>
+          <th>Salary</th>
           <th>Is Manager</th>
         </tr>
       </thead>

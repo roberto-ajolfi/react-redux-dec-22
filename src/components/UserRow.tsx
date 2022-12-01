@@ -16,6 +16,7 @@ export const UserRow = (props: { user: User }) => {
     <td>{user.id}</td>
     <td>{user.fullName}</td>
     <td>{user.userName}</td>
+    <td>{user.salary}</td>
     <td>{user.isManager ? (
       <FontAwesomeIcon icon={faCheck} color={"crimson"} size={"lg"} />
     ) : "" }</td>
